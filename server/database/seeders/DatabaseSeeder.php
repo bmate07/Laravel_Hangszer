@@ -1,5 +1,4 @@
 <?php
-
 namespace Database\Seeders;
 
 use App\Models\User;
@@ -14,20 +13,14 @@ class DatabaseSeeder extends Seeder
     /**
      * Seed the application's database.
      */
+
     public function run(): void
     {
-        // User::factory(10)->create();
-
-        //Mielőtt seedelünk, minden táblát töröljünk le.
-        DB::statement('DELETE FROM products');
-        DB::statement('DELETE FROM users');
-
-
+        DB::statement('DELETE FROM instruments');
 
         //Ami Seeder osztály itt fel van sorolva, annak lefut a run() metódusa
         $this->call([
-            UserSeeder::class,
-            ProductSeeder::class,
+            InstrumentsSeeder::class,
         ]);
     }
 }
