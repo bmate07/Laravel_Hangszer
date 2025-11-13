@@ -6,28 +6,32 @@
 ### @token = 12|ibiwTdr77o8ppToh1tBxIkckBNb8ECjIjLgaweTaa757cdef
 
 ### teszt
-get {{host}}/api/x
+get {{host}}/api/
 
+### post methods
+GET url HTTP/1.1  {{host}}/api/instruments
+Accept: application/json
+Content-Type: application/json
 
-### get products
-get {{host}}/api/products
+get {{host}}/api/instruments/1
 
-
-### get product by id
-get {{host}}/api/products/5023333
-
-
-### post products
-POST  {{host}}/api/products
+POST  {{host}}/api/instruments
 Accept: application/json
 Content-Type: application/json
 
 {
-    "category": "Bogyós",
-    "name": "Málna2222",
+    "name": "f3333",
     "description": "Kézzel termelt egészség",
-    "picture": "https:\/\/hur.webmania.cc\/img\/malna.jpg",
+    "brand": "brandike",
     "price": 8000,
-    "stock": 500
+    "quantity": 22
 }
 
+delete {{host}}/api/instruments/14
+Accept: application/json
+Content-Type: application/json
+
+{
+    "description": "Te ki vagy bogyó",
+    "price": 8001
+}
